@@ -1,146 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand"
-                    href="http://www.tatc.ac.th/?usid=20100887&language=Th"
-                    target="_blank">
-                    <img src="http://www.tatc.ac.th/files/resize_20100887_12051611113634.gif" style="width: 30px; height: 30px;"></a>
-                <button class="navbar-toggler" type="button"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<style>
+    .announcement-content img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+</style>
+<body style="background-color: lime;">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <!-- Brand Logo -->
+            <a class="navbar-brand" href="http://www.tatc.ac.th/?usid=20100887&language=Th" target="_blank">
+                <img src="http://www.tatc.ac.th/files/resize_20100887_12051611113634.gif" 
+                     alt="TATC Logo" 
+                     style="width: 30px; height: 30px;">
+            </a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" 
+                    type="button" 
                     data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                    data-bs-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false" 
                     aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse"
-                    id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">สมาชิก</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                ข้อมูลเพิ่มเติม
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="#">สมัครสมาชิก</a>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">หน้าหลัก</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">ค้นหาบทความ</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">อัลบั้มรูปภาพ</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">เนื้อหาเพิ่มเติม</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">เพื่อนสมาชิก</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="bi bi-house-door-fill"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                เข้าสู่ระบบ
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left Menu Items -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">สมาชิก</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" 
+                           href="#" 
+                           role="button"
+                           data-bs-toggle="dropdown" 
+                           aria-expanded="false">
+                            ข้อมูลเพิ่มเติม
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">สมัครสมาชิก</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">หน้าหลัก</a></li>
+                            <li><a class="dropdown-item" href="#">ค้นหาบทความ</a></li>
+                            <li><a class="dropdown-item" href="#">อัลบั้มรูปภาพ</a></li>
+                            <li><a class="dropdown-item" href="#">เนื้อหาเพิ่มเติม</a></li>
+                            <li><a class="dropdown-item" href="#">เพื่อนสมาชิก</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <!-- Right Menu Items -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="bi bi-house-door-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">เข้าสู่ระบบ</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- slide carousel -->
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button"
-                    data-bs-target="#carouselExampleInterval"
-                    data-bs-slide-to="0" class="active" aria-current="true"
+    <!-- Image Carousel -->
+    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" 
+                    data-bs-target="#imageCarousel" 
+                    data-bs-slide-to="0"
+                    class="active" 
+                    aria-current="true" 
                     aria-label="Slide 1"></button>
-                <button type="button"
-                    data-bs-target="#carouselExampleInterval"
-                    data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button"
-                    data-bs-target="#carouselExampleInterval"
-                    data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button"
-                    data-bs-target="#carouselExampleInterval"
-                    data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button"
-                    data-bs-target="#carouselExampleInterval"
-                    data-bs-slide-to="4" aria-label="Slide 5"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="3000">
-                    <img src="http://www.tatc.ac.th/files/2306190880514.jpg"
-                        class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="http://www.tatc.ac.th/files/2308150883228.jpg"
-                        class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="http://www.tatc.ac.th/files/23061910101643.jpg"
-                        class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="http://www.tatc.ac.th/files/23100515155332.jpg"
-                        class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="http://www.tatc.ac.th/files/23100515155404.jpg"
-                        class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button"
-                data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button"
-                data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <button type="button" 
+                    data-bs-target="#imageCarousel" 
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            <button type="button" 
+                    data-bs-target="#imageCarousel" 
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            <button type="button" 
+                    data-bs-target="#imageCarousel" 
+                    data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+            <button type="button" 
+                    data-bs-target="#imageCarousel" 
+                    data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
         </div>
-
-        <div class="container-fluid my-3 bg-light py-3">
-            <div class="row">
-                <div class="col-12">
-                    <div class="d-flex flex-wrap justify-content-center gap-2">
-                        <a class="btn btn-secondary flex-shrink-0" href="#">หน่วยงานการศึกษา</a>
-                        <a class="btn btn-secondary flex-shrink-0" href="#">ฝ่ายบริหารทรัพยากร</a>
-                        <a class="btn btn-secondary flex-shrink-0" href="#">ฝ่ายวิชาการ</a>
-                        <a class="btn btn-secondary flex-shrink-0" href="#">ฝ่ายแผนงานและความร่วมมือ</a>
-                        <a class="btn btn-secondary flex-shrink-0" href="#">ฝ่ายพัฒนานักเรียนนักศึกษา</a>
-                        <a class="btn btn-secondary flex-shrink-0" href="#">ITA/ข้อมูลสาธารณะ</a>
-                    </div>
-                </div>
+        
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="http://www.tatc.ac.th/files/2306190880514.jpg" 
+                     class="d-block w-100" 
+                     alt="College Activity 1">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="http://www.tatc.ac.th/files/2308150883228.jpg" 
+                     class="d-block w-100" 
+                     alt="College Activity 2">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="http://www.tatc.ac.th/files/23061910101643.jpg" 
+                     class="d-block w-100" 
+                     alt="College Activity 3">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="http://www.tatc.ac.th/files/23100515155332.jpg" 
+                     class="d-block w-100" 
+                     alt="College Activity 4">
+            </div>
+            <div class="carousel-item">
+                <img src="http://www.tatc.ac.th/files/23100515155404.jpg" 
+                     class="d-block w-100" 
+                     alt="College Activity 5">
             </div>
         </div>
+        
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" 
+                type="button" 
+                data-bs-target="#imageCarousel" 
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" 
+                type="button" 
+                data-bs-target="#imageCarousel" 
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <br>
+    <!-- Department Buttons Section -->
+    <div class="container-fluid department-buttons">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <a class="btn btn-secondary flex-shrink-0" href="#">หน่วยงานการศึกษา</a>
+                    <a class="btn btn-secondary flex-shrink-0" href="#">ฝ่ายบริหารทรัพยากร</a>
+                    <a class="btn btn-secondary flex-shrink-0" href="#">ฝ่ายวิชาการ</a>
+                    <a class="btn btn-secondary flex-shrink-0" href="#">ฝ่ายแผนงานและความร่วมมือ</a>
+                    <a class="btn btn-secondary flex-shrink-0" href="#">ฝ่ายพัฒนานักเรียนนักศึกษา</a>
+                    <a class="btn btn-secondary flex-shrink-0" href="#">ITA/ข้อมูลสาธารณะ</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+ <!-- Main Content Section -->
+<div class="container-fluid info-section">
+    <div class="row g-4 align-items-start">
+        <!-- College Information -->
+        <div class="col-12 col-md-3">
+            <div class="college-info text-center bg-white p-4 rounded-5 mb-3" style="max-width: 300px; margin: auto;">
+                <img src="http://www.tatc.ac.th/files/resize_20100887_12051611113634.gif" 
+                     alt="TATC Logo" 
+                     width="150"
+                     class="mb-3">
+                <h5 class="mb-3">เทคนิคสัตหีบ</h5>
+                <div class="text-start text-center">
+                    <p class="mb-1">กม 160 193 หมู่ 3 ต.นาจอมเทียน</p>
+                    <p class="mb-1">อ.สัตหีบ จ.ชลบุรี 20250</p>
+                    <p class="mb-1">โทรศัพท์ 038-23398, 038-238527</p>
+                    <p class="mb-0">อีเมล sarabun@tatc.ac.th</p>
+                </div>
+            </div>
+
+            <div class="college-info text-center bg-white p-2 rounded-5 mb-3" style="max-width: 300px; margin: auto;">
+                <img src="img/base_info.png" alt="base_info" class="img-fluid mb-3">
+            </div>
+
+            <div class="college-info text-center bg-white p-2 rounded-5 mb-3" style="max-width: 300px; margin: auto;">
+                <img src="img/department_opened.png" alt="base_info" class="img-fluid mb-3">
+            </div>
+        </div>
+
+        <!-- Announcements Section -->
+        <div class="col-12 col-md-6">
+            <div class="announcements p-4">
+                <div class="announcement-content text-center">
+                    <img src="img/ann_1.png" alt="Department Info" class="img-fluid mb-3">
+                    <img src="img/ann_1.png" alt="Department Info" class="img-fluid mb-3">
+                    <img src="img/middle.png" alt="Department Info" class="img-fluid mb-3">
+                    <img src="img/middle_1.png" alt="Department Info" class="img-fluid mb-3">
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-12 col-md-3 text-center" style="max-width: 330px;">
+            <div class="sidebar p-4 text-center bg-light rounded-3">
+                <h4>ข้อมูลเพิ่มเติม</h4>
+                <div class="college-info text-center bg-white p-2 rounded-5 mb-3" style="max-width: 270px; margin: auto;">
+                    <img src="img/aorntai.png" alt="base_info" class="img-fluid mb-3">
+                </div>
+                <div class="college-info text-center bg-white p-2 rounded-5 mb-3" style="max-width: 270px; margin: auto;">
+                    <img src="img/right_1.png" alt="base_info" class="img-fluid mb-3">
+                </div>
+                <div class="college-info text-center bg-white p-2 rounded-5 mb-3" style="max-width: 270px; margin: auto;">
+                    <img src="img/right_2.png" alt="base_info" class="img-fluid mb-3">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
