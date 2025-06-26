@@ -3,18 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>เทคนิคสัตหีบ - TATC</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        /* Custom responsive styles */
+        body {
+            background-color: lime;
+        }
+        
+        .announcement-content img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        /* Carousel responsive adjustments */
+        .carousel-inner img {
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        @media (min-width: 768px) {
+            .carousel-inner img {
+                height: 400px;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .carousel-inner img {
+                height: 500px;
+            }
+        }
+        
+        /* Department buttons responsive */
+        .department-buttons {
+            padding: 15px 0;
+        }
+        
+        .department-buttons .btn {
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            padding: 8px 12px;
+        }
+        
+        @media (min-width: 768px) {
+            .department-buttons .btn {
+                font-size: 0.9rem;
+                padding: 10px 15px;
+            }
+        }
+        
+        /* College info cards responsive */
+        .college-info {
+            margin-bottom: 20px !important;
+        }
+        
+        .college-info img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Navbar responsive improvements */
+        .navbar-brand img {
+            width: 25px;
+            height: 25px;
+        }
+        
+        @media (min-width: 768px) {
+            .navbar-brand img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        
+        /* Info section responsive layout */
+        .info-section {
+            padding: 20px 15px;
+        }
+        
+        @media (min-width: 768px) {
+            .info-section {
+                padding: 30px;
+            }
+        }
+        
+        /* Sidebar responsive */
+        .sidebar {
+            margin-top: 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .sidebar {
+                margin-top: 0;
+            }
+        }
+        
+        /* Announcements responsive */
+        .announcements {
+            padding: 20px 15px;
+        }
+        
+        @media (min-width: 768px) {
+            .announcements {
+                padding: 30px;
+            }
+        }
+        
+        /* Text responsive */
+        .college-info h5 {
+            font-size: 1.1rem;
+        }
+        
+        .college-info p {
+            font-size: 0.85rem;
+        }
+        
+        @media (min-width: 768px) {
+            .college-info h5 {
+                font-size: 1.25rem;
+            }
+            
+            .college-info p {
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Container max-width adjustments */
+        .college-info-container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 576px) {
+            .college-info-container {
+                max-width: 400px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .college-info-container {
+                max-width: 300px;
+            }
+        }
+        
+        .sidebar-container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 576px) {
+            .sidebar-container {
+                max-width: 400px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .sidebar-container {
+                max-width: 330px;
+            }
+        }
+    </style>
 </head>
-<style>
-    .announcement-content img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-</style>
-<body style="background-color: lime;">
+<body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
@@ -22,7 +173,7 @@
             <a class="navbar-brand" href="http://www.tatc.ac.th/?usid=20100887&language=Th" target="_blank">
                 <img src="http://www.tatc.ac.th/files/resize_20100887_12051611113634.gif" 
                      alt="TATC Logo" 
-                     style="width: 30px; height: 30px;">
+                     class="d-inline-block align-text-top">
             </a>
             
             <!-- Mobile Toggle Button -->
@@ -151,12 +302,12 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <br>
+
     <!-- Department Buttons Section -->
     <div class="container-fluid department-buttons">
         <div class="row">
             <div class="col-12">
-                <div class="d-flex flex-wrap justify-content-center gap-2">
+                <div class="d-flex flex-wrap justify-content-center gap-2 px-3">
                     <a class="btn btn-secondary flex-shrink-0" href="#">หน่วยงานการศึกษา</a>
                     <a class="btn btn-secondary flex-shrink-0" href="#">ฝ่ายบริหารทรัพยากร</a>
                     <a class="btn btn-secondary flex-shrink-0" href="#">ฝ่ายวิชาการ</a>
@@ -168,64 +319,72 @@
         </div>
     </div>
 
- <!-- Main Content Section -->
-<div class="container-fluid info-section">
-    <div class="row g-4 align-items-start">
-        <!-- College Information -->
-        <div class="col-12 col-md-3">
-            <div class="college-info text-center bg-white p-4 rounded-5 mb-3" style="max-width: 300px; margin: auto;">
-                <img src="http://www.tatc.ac.th/files/resize_20100887_12051611113634.gif" 
-                     alt="TATC Logo" 
-                     width="150"
-                     class="mb-3">
-                <h5 class="mb-3">เทคนิคสัตหีบ</h5>
-                <div class="text-start text-center">
-                    <p class="mb-1">กม 160 193 หมู่ 3 ต.นาจอมเทียน</p>
-                    <p class="mb-1">อ.สัตหีบ จ.ชลบุรี 20250</p>
-                    <p class="mb-1">โทรศัพท์ 038-23398, 038-238527</p>
-                    <p class="mb-0">อีเมล sarabun@tatc.ac.th</p>
+    <!-- Main Content Section -->
+    <div class="container-fluid info-section">
+        <div class="row g-4">
+            <!-- College Information -->
+            <div class="col-12 col-lg-3">
+                <div class="college-info-container">
+                    <div class="college-info text-center bg-white p-3 p-md-4 rounded-5 mb-3">
+                        <img src="http://www.tatc.ac.th/files/resize_20100887_12051611113634.gif" 
+                             alt="TATC Logo" 
+                             width="120"
+                             class="mb-3 img-fluid">
+                        <h5 class="mb-3">เทคนิคสัตหีบ</h5>
+                        <div class="text-start">
+                            <p class="mb-1">กม 160 193 หมู่ 3 ต.นาจอมเทียน</p>
+                            <p class="mb-1">อ.สัตหีบ จ.ชลบุรี 20250</p>
+                            <p class="mb-1">โทรศัพท์ 038-23398, 038-238527</p>
+                            <p class="mb-0">อีเมล sarabun@tatc.ac.th</p>
+                        </div>
+                    </div>
+
+                    <div class="college-info text-center bg-white p-2 rounded-5 mb-3">
+                        <img src="img/base_info.png" alt="base_info" class="img-fluid mb-2">
+                    </div>
+
+                    <div class="college-info text-center bg-white p-2 rounded-5 mb-3">
+                        <img src="img/department_opened.png" alt="department_opened" class="img-fluid mb-2">
+                    </div>
                 </div>
             </div>
 
-            <div class="college-info text-center bg-white p-2 rounded-5 mb-3" style="max-width: 300px; margin: auto;">
-                <img src="img/base_info.png" alt="base_info" class="img-fluid mb-3">
-            </div>
-
-            <div class="college-info text-center bg-white p-2 rounded-5 mb-3" style="max-width: 300px; margin: auto;">
-                <img src="img/department_opened.png" alt="base_info" class="img-fluid mb-3">
-            </div>
-        </div>
-
-        <!-- Announcements Section -->
-        <div class="col-12 col-md-6">
-            <div class="announcements p-4">
-                <div class="announcement-content text-center">
-                    <img src="img/ann_1.png" alt="Department Info" class="img-fluid mb-3">
-                    <img src="img/ann_1.png" alt="Department Info" class="img-fluid mb-3">
-                    <img src="img/middle.png" alt="Department Info" class="img-fluid mb-3">
-                    <img src="img/middle_1.png" alt="Department Info" class="img-fluid mb-3">
+            <!-- Announcements Section -->
+            <div class="col-12 col-lg-6">
+                <div class="announcements">
+                    <div class="announcement-content text-center">
+                        <img src="img/ann_1.png" alt="Announcement 1" class="img-fluid mb-3">
+                        <img src="img/ann_1.png" alt="Announcement 2" class="img-fluid mb-3">
+                        <img src="img/middle.png" alt="Middle Content" class="img-fluid mb-3">
+                        <img src="img/middle_1.png" alt="Middle Content 1" class="img-fluid mb-3">
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Sidebar -->
-        <div class="col-12 col-md-3 text-center" style="max-width: 330px;">
-            <div class="sidebar p-4 text-center bg-light rounded-3">
-                <h4>ข้อมูลเพิ่มเติม</h4>
-                <div class="college-info text-center bg-white p-2 rounded-5 mb-3" style="max-width: 270px; margin: auto;">
-                    <img src="img/aorntai.png" alt="base_info" class="img-fluid mb-3">
-                </div>
-                <div class="college-info text-center bg-white p-2 rounded-5 mb-3" style="max-width: 270px; margin: auto;">
-                    <img src="img/right_1.png" alt="base_info" class="img-fluid mb-3">
-                </div>
-                <div class="college-info text-center bg-white p-2 rounded-5 mb-3" style="max-width: 270px; margin: auto;">
-                    <img src="img/right_2.png" alt="base_info" class="img-fluid mb-3">
+            <!-- Sidebar -->
+            <div class="col-12 col-lg-3">
+                <div class="sidebar-container">
+                    <div class="sidebar p-3 p-md-4 text-center bg-light rounded-3">
+                        <h4 class="mb-4">ข้อมูลเพิ่มเติม</h4>
+                        
+                        <div class="college-info text-center bg-white p-2 rounded-5 mb-3">
+                            <img src="img/aorntai.png" alt="aorntai" class="img-fluid mb-2">
+                        </div>
+                        
+                        <div class="college-info text-center bg-white p-2 rounded-5 mb-3">
+                            <img src="img/right_1.png" alt="right_1" class="img-fluid mb-2">
+                        </div>
+                        
+                        <div class="college-info text-center bg-white p-2 rounded-5 mb-3">
+                            <img src="img/right_2.png" alt="right_2" class="img-fluid mb-2">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Bootstrap JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
