@@ -1,563 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เทคนิคสัตหีบ - TATC</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <style>
-        /* Custom responsive styles */
-        body {
-            background-color: lime;
-        }
-        
-        .announcement-content img {
-            max-width: 100%;
-            height: auto;
-            object-fit: contain;
-        }
-        
-        /* Carousel responsive adjustments */
-        .carousel-inner img {
-            height: 250px;
-            object-fit: cover;
-        }
-        
-        @media (min-width: 768px) {
-            .carousel-inner img {
-                height: 400px;
-            }
-        }
-        
-        @media (min-width: 1200px) {
-            .carousel-inner img {
-                height: 500px;
-            }
-        }
-        
-        /* Department buttons responsive */
-        .department-buttons {
-            padding: 15px 0;
-        }
-        
-        .department-buttons .btn {
-            margin-bottom: 8px;
-            font-size: 0.85rem;
-            padding: 8px 12px;
-        }
-        
-        @media (min-width: 768px) {
-            .department-buttons .btn {
-                font-size: 0.9rem;
-                padding: 10px 15px;
-            }
-        }
-        
-        /* College info cards responsive */
-        .college-info {
-            margin-bottom: 20px !important;
-        }
-        
-        .college-info img {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        /* Navbar responsive improvements */
-        .navbar-brand img {
-            width: 25px;
-            height: 25px;
-        }
-        
-        @media (min-width: 768px) {
-            .navbar-brand img {
-                width: 30px;
-                height: 30px;
-            }
-        }
-        
-        /* Info section responsive layout */
-        .info-section {
-            padding: 20px 15px;
-        }
-        
-        @media (min-width: 768px) {
-            .info-section {
-                padding: 30px;
-            }
-        }
-        
-        /* Sidebar responsive */
-        .sidebar {
-            margin-top: 20px;
-        }
-        
-        @media (min-width: 768px) {
-            .sidebar {
-                margin-top: 0;
-            }
-        }
-        
-        /* Announcements responsive */
-        .announcements {
-            padding: 20px 15px;
-        }
-        
-        @media (min-width: 768px) {
-            .announcements {
-                padding: 30px;
-            }
-        }
-        
-        /* Text responsive */
-        .college-info h5 {
-            font-size: 1.1rem;
-        }
-        
-        .college-info p {
-            font-size: 0.85rem;
-        }
-        
-        @media (min-width: 768px) {
-            .college-info h5 {
-                font-size: 1.25rem;
-            }
-            
-            .college-info p {
-                font-size: 0.9rem;
-            }
-        }
-        
-        /* Container max-width adjustments */
-        .college-info-container {
-            max-width: 100%;
-            margin: 0 auto;
-        }
-        
-        @media (min-width: 576px) {
-            .college-info-container {
-                max-width: 400px;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            .college-info-container {
-                max-width: 300px;
-            }
-        }
-        
-        .sidebar-container {
-            max-width: 100%;
-            margin: 0 auto;
-        }
-        
-        @media (min-width: 576px) {
-            .sidebar-container {
-                max-width: 400px;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            .sidebar-container {
-                max-width: 330px;
-            }
-        }
-        
-        /* Modal styling */
-        .modal-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-bottom: none;
-        }
-        
-        .modal-header .btn-close {
-            filter: invert(1);
-        }
-        
-        .modal-body {
-            padding: 2rem;
-        }
-        
-        .form-floating {
-            margin-bottom: 1rem;
-        }
-        
-        .form-floating > .form-control {
-            border-radius: 10px;
-            border: 2px solid #e9ecef;
-            transition: all 0.3s ease;
-        }
-        
-        .form-floating > .form-control:focus {
-            border-color: #667eea;
-            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
-        }
-        
-        .form-floating > label {
-            color: #6c757d;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border: none;
-            border-radius: 10px;
-            padding: 12px 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-        
-        .form-check-input:checked {
-            background-color: #667eea;
-            border-color: #667eea;
-        }
-        
-        .modal-footer {
-            border-top: none;
-            padding-top: 0;
-        }
-        
-        .text-muted a {
-            color: #667eea !important;
-            text-decoration: none;
-        }
-        
-        .text-muted a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thai-austrian Technical college</title>
+
+  <!-- 1. ลิงค์ css ไฟล์ bootstrap.min.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- 2. ใส่ฟ้อนต์ที่ดาวโหลดมา -->
+  <style>
+    @font-face {
+      font-family: 'SOV';
+      src: url('fonts/DSBirthdayTester.ttf') format('truetype');
+    }
+
+    body {
+      font-family: 'SOV', sans-serif;
+
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-        <div class="container-fluid">
-            <!-- Brand Logo -->
-            <a class="navbar-brand" href="http://www.tatc.ac.th/?usid=20100887&language=Th" target="_blank">
-                <img src="http://www.tatc.ac.th/files/resize_20100887_12051611113634.gif" 
-                     alt="TATC Logo" 
-                     class="d-inline-block align-text-top">
-            </a>
-            
-            <!-- Mobile Toggle Button -->
-            <button class="navbar-toggler" 
-                    type="button" 
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" 
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false" 
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <!-- Navigation Menu -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Left Menu Items -->
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">สมาชิก</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" 
-                           href="#" 
-                           role="button"
-                           data-bs-toggle="dropdown" 
-                           aria-expanded="false">
-                            ข้อมูลเพิ่มเติม
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">สมัครสมาชิก</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">หน้าหลัก</a></li>
-                            <li><a class="dropdown-item" href="#">ค้นหาบทความ</a></li>
-                            <li><a class="dropdown-item" href="#">อัลบั้มรูปภาพ</a></li>
-                            <li><a class="dropdown-item" href="#">เนื้อหาเพิ่มเติม</a></li>
-                            <li><a class="dropdown-item" href="#">เพื่อนสมาชิก</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                
-                <!-- Right Menu Items -->
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="bi bi-house-door-fill"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">เข้าสู่ระบบ</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="2000">
+        <img src="img/1.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="img/2.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="img/3.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
-    <!-- Image Carousel -->
-    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
-        <!-- Carousel Indicators -->
-        <div class="carousel-indicators">
-            <button type="button" 
-                    data-bs-target="#imageCarousel" 
-                    data-bs-slide-to="0"
-                    class="active" 
-                    aria-current="true" 
-                    aria-label="Slide 1"></button>
-            <button type="button" 
-                    data-bs-target="#imageCarousel" 
-                    data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-            <button type="button" 
-                    data-bs-target="#imageCarousel" 
-                    data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            <button type="button" 
-                    data-bs-target="#imageCarousel" 
-                    data-bs-slide-to="3"
-                    aria-label="Slide 4"></button>
-            <button type="button" 
-                    data-bs-target="#imageCarousel" 
-                    data-bs-slide-to="4"
-                    aria-label="Slide 5"></button>
-        </div>
-        
-        <!-- Carousel Items -->
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="3000">
-                <img src="http://www.tatc.ac.th/files/2306190880514.jpg" 
-                     class="d-block w-100" 
-                     alt="College Activity 1">
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="http://www.tatc.ac.th/files/2308150883228.jpg" 
-                     class="d-block w-100" 
-                     alt="College Activity 2">
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="http://www.tatc.ac.th/files/23061910101643.jpg" 
-                     class="d-block w-100" 
-                     alt="College Activity 3">
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="http://www.tatc.ac.th/files/23100515155332.jpg" 
-                     class="d-block w-100" 
-                     alt="College Activity 4">
-            </div>
-            <div class="carousel-item">
-                <img src="http://www.tatc.ac.th/files/23100515155404.jpg" 
-                     class="d-block w-100" 
-                     alt="College Activity 5">
-            </div>
-        </div>
-        
-        <!-- Carousel Controls -->
-        <button class="carousel-control-prev" 
-                type="button" 
-                data-bs-target="#imageCarousel" 
-                data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" 
-                type="button" 
-                data-bs-target="#imageCarousel" 
-                data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary z-0 position-relative">
+    <img src="img/logo.png" alt="" class="z-1 position-absolute bottom-0">
+    <div class="container-fluid" style="padding-left:700px;">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+              type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+              type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+              type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- tab content ส่วนเนื้อหาของ tab-->
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+      <h1>Home</h1>
+    </div>
+    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+      <h1>Profile</h1>
+    </div>
+    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+      <h1>Contact</h1>
     </div>
 
-    <!-- Department Buttons Section -->
-    <div class="container-fluid department-buttons">
-        <div class="row">
-            <div class="col-12">
-                <div class="d-flex flex-wrap justify-content-center gap-2 px-3">
-                    <a class="btn btn-secondary flex-shrink-0" href="#">หน่วยงานการศึกษา</a>
-                    <a class="btn btn-secondary flex-shrink-0" href="#">ฝ่ายบริหารทรัพยากร</a>
-                    <a class="btn btn-secondary flex-shrink-0" href="#">ฝ่ายวิชาการ</a>
-                    <a class="btn btn-secondary flex-shrink-0" href="#">ฝ่ายแผนงานและความร่วมมือ</a>
-                    <a class="btn btn-secondary flex-shrink-0" href="#">ฝ่ายพัฒนานักเรียนนักศึกษา</a>
-                    <a class="btn btn-secondary flex-shrink-0" href="#">ITA/ข้อมูลสาธารณะ</a>
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
 
-    <!-- Main Content Section -->
-    <div class="container-fluid info-section">
-        <div class="row g-4">
-            <!-- College Information -->
-            <div class="col-12 col-lg-3">
-                <div class="college-info-container">
-                    <div class="college-info text-center bg-white p-3 p-md-4 rounded-5 mb-3">
-                        <img src="http://www.tatc.ac.th/files/resize_20100887_12051611113634.gif" 
-                             alt="TATC Logo" 
-                             width="120"
-                             class="mb-3 img-fluid">
-                        <h5 class="mb-3">เทคนิคสัตหีบ</h5>
-                        <div class="text-start">
-                            <p class="mb-1">กม 160 193 หมู่ 3 ต.นาจอมเทียน</p>
-                            <p class="mb-1">อ.สัตหีบ จ.ชลบุรี 20250</p>
-                            <p class="mb-1">โทรศัพท์ 038-23398, 038-238527</p>
-                            <p class="mb-0">อีเมล sarabun@tatc.ac.th</p>
-                        </div>
-                    </div>
+  <!-- ใส่ javascript -->
+  <script src="js/bootstrap.bundle.min.js"></script>
 
-                    <div class="college-info text-center bg-white p-2 rounded-5 mb-3">
-                        <img src="img/base_info.png" alt="base_info" class="img-fluid mb-2">
-                    </div>
-
-                    <div class="college-info text-center bg-white p-2 rounded-5 mb-3">
-                        <img src="img/department_opened.png" alt="department_opened" class="img-fluid mb-2">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Announcements Section -->
-            <div class="col-12 col-lg-6">
-                <div class="announcements">
-                    <div class="announcement-content text-center">
-                        <img src="img/ann_1.png" alt="Announcement 1" class="img-fluid mb-3">
-                        <img src="img/ann_1.png" alt="Announcement 2" class="img-fluid mb-3">
-                        <img src="img/middle.png" alt="Middle Content" class="img-fluid mb-3">
-                        <img src="img/middle_1.png" alt="Middle Content 1" class="img-fluid mb-3">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sidebar -->
-            <div class="col-12 col-lg-3">
-                <div class="sidebar-container">
-                    <div class="sidebar p-3 p-md-4 text-center bg-light rounded-3">
-                        <h4 class="mb-4">ข้อมูลเพิ่มเติม</h4>
-                        
-                        <div class="college-info text-center bg-white p-2 rounded-5 mb-3">
-                            <img src="img/aorntai.png" alt="aorntai" class="img-fluid mb-2">
-                        </div>
-                        
-                        <div class="college-info text-center bg-white p-2 rounded-5 mb-3">
-                            <img src="img/right_1.png" alt="right_1" class="img-fluid mb-2">
-                        </div>
-                        
-                        <div class="college-info text-center bg-white p-2 rounded-5 mb-3">
-                            <img src="img/right_2.png" alt="right_2" class="img-fluid mb-2">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Login Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">
-                        <i class="bi bi-person-circle me-2"></i>เข้าสู่ระบบ
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com" required>
-                            <label for="loginEmail">อีเมล</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
-                            <label for="loginPassword">รหัสผ่าน</label>
-                        </div>
-                        <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" id="rememberMe">
-                            <label class="form-check-label" for="rememberMe">
-                                จำฉันไว้
-                            </label>
-                        </div>
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-primary">
-                                <i class="bi bi-box-arrow-in-right me-2"></i>เข้าสู่ระบบ
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <p class="text-muted mb-0">
-                        ยังไม่มีบัญชี? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">สมัครสมาชิก</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Register Modal -->
-    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="registerModalLabel">
-                        <i class="bi bi-person-plus me-2"></i>สมัครสมาชิก
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="registerFirstName" placeholder="ชื่อ" required>
-                                    <label for="registerFirstName">ชื่อ</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="registerLastName" placeholder="นามสกุล" required>
-                                    <label for="registerLastName">นามสกุล</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="registerEmail" placeholder="name@example.com" required>
-                            <label for="registerEmail">อีเมล</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="registerPassword" placeholder="Password" required>
-                            <label for="registerPassword">รหัสผ่าน</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
-                            <label for="confirmPassword">ยืนยันรหัสผ่าน</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="tel" class="form-control" id="registerPhone" placeholder="เบอร์โทรศัพท์">
-                            <label for="registerPhone">เบอร์โทรศัพท์</label>
-                        </div>
-                        <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" id="agreeTerms" required>
-                            <label class="form-check-label" for="agreeTerms">
-                                ฉันยอมรับ <a href="#" class="text-decoration-none">ข้อกำหนดและเงื่อนไข</a>
-                            </label>
-                        </div>
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-primary">
-                                <i class="bi bi-person-plus me-2"></i>สมัครสมาชิก
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <p class="text-muted mb-0">
-                        มีบัญชีแล้ว? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">เข้าสู่ระบบ</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
